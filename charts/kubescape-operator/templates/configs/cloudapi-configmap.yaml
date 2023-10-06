@@ -13,6 +13,7 @@ metadata:
     "helm.sh/hook-weight": "0"
     "helm.sh/hook-delete-policy": before-hook-creation
     "helm.sh/resource-policy": keep
+    "argocd.argoproj.io/sync-options": Prune=false
   {{- end }}
 data:
   {{- if $components.serviceDiscovery.enabled }}
